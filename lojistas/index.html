@@ -293,29 +293,59 @@
       <div class="wrap">
         <p class="sobretitulo sobretitulo--marrom">Faça a conta</p>
         <h2 id="conta-titulo">Quanto custa o cashback para a sua loja</h2>
+        <p class="estreito conta__intro">Você escolhe quanto quer devolver ao cliente. Ajuste o percentual e veja o custo por venda e no mês.</p>
         <div class="conta">
           <div class="conta__calc">
-            <label for="valor-venda">Valor da venda</label>
-            <div class="conta__campo">
-              <span>R$</span>
-              <input id="valor-venda" type="number" inputmode="decimal" min="1" step="1" value="200">
+            <div class="conta__duplo">
+              <div>
+                <label for="valor-venda">Valor médio da venda</label>
+                <div class="conta__campo">
+                  <span>R$</span>
+                  <input id="valor-venda" type="number" inputmode="decimal" min="1" step="1" value="200">
+                </div>
+              </div>
+              <div>
+                <label for="vendas-mes">Vendas por mês com CPF</label>
+                <div class="conta__campo">
+                  <input id="vendas-mes" type="number" inputmode="numeric" min="1" step="1" value="100">
+                </div>
+              </div>
             </div>
-            <fieldset class="conta__pct">
-              <legend>Percentual de cashback</legend>
-              <label><input type="radio" name="pct" value="1" checked> 1%</label>
-              <label><input type="radio" name="pct" value="2.5"> 2,5%</label>
-            </fieldset>
+
+            <div class="conta__pct">
+              <div class="conta__pct-topo">
+                <label for="pct">Percentual de cashback</label>
+                <output id="pct-valor" for="pct">1%</output>
+              </div>
+              <input id="pct" type="range" min="0.5" max="10" step="0.5" value="1" aria-describedby="pct-dica">
+              <div class="conta__escala" aria-hidden="true"><span>0,5%</span><span>5%</span><span>10%</span></div>
+              <div class="conta__atalhos" role="group" aria-label="Percentuais de referência">
+                <button type="button" data-pct="1">1% <small>mais adotado</small></button>
+                <button type="button" data-pct="2.5">2,5% <small>opção do cadastro</small></button>
+                <button type="button" data-pct="5">5%</button>
+              </div>
+              <p id="pct-dica" class="conta__dica">Simulação. O percentual final é definido no formulário de cadastro.</p>
+            </div>
           </div>
+
           <div class="conta__resultado" aria-live="polite">
             <div class="conta__linha conta__linha--cb">
-              <span>Cashback que volta ao cliente</span>
+              <span>Cashback por venda</span>
               <strong id="res-cashback">R$ 2,00</strong>
             </div>
             <div class="conta__linha">
-              <span>Um desconto de 10% custaria</span>
-              <strong id="res-desconto">R$ 20,00</strong>
+              <span>Cashback no mês <small>(cobrado só se resgatado)</small></span>
+              <strong id="res-mes" class="conta__verde">R$ 200,00</strong>
             </div>
-            <p class="conta__nota">E o cashback só é cobrado da sua empresa quando o cliente resgata.</p>
+            <div class="conta__linha">
+              <span>Desconto de 10% no mesmo volume</span>
+              <strong id="res-desconto">R$ 2.000,00</strong>
+            </div>
+            <div class="conta__economia">
+              <span>Diferença a favor da sua margem</span>
+              <strong id="res-economia">R$ 1.800,00</strong>
+              <small>por mês, comparado ao desconto de 10%</small>
+            </div>
           </div>
         </div>
       </div>

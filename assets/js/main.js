@@ -36,20 +36,37 @@
     ctaFixo.classList.remove('oculto');
   }
 
-  // Simulação de custo do cashback
+  // Simulação de custo do cashback com percentual variável
   const valor = document.getElementById('valor-venda');
-  if (valor) {
+  const vendas = document.getElementById('vendas-mes');
+  const pct = document.getElementById('pct');
+  if (valor && vendas && pct) {
+    const DESCONTO_REFERENCIA = 10;
     const brl = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
-    const resCashback = document.getElementById('res-cashback');
-    const resDesconto = document.getElementById('res-desconto');
+    const num = new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 1 });
+    const $ = (id) => document.getElementById(id);
+    const atalhos = document.querySelectorAll('.conta__atalhos [data-pct]');
+
     const calcular = () => {
       const venda = Math.max(0, Number(valor.value) || 0);
-      const pct = Number(document.querySelector('input[name="pct"]:checked').value);
-      resCashback.textContent = brl.format(venda * pct / 100);
-      resDesconto.textContent = brl.format(venda * 0.10);
+      const qtd = Math.max(0, Math.round(Number(vendas.value) || 0));
+      const p = Number(pct.value);
+      const porVenda = venda * p / 100;
+      const noMes = porVenda * qtd;
+      const desconto = venda * qtd * DESCONTO_REFERENCIA / 100;
+
+      pct.style.setProperty('--preenchido', `${((p - pct.min) / (pct.max - pct.min)) * 100}%`);
+      $('pct-valor').textContent = `${num.format(p)}%`;
+      pct.setAttribute('aria-valuetext', `${num.format(p)} por cento`);
+      $('res-cashback').textContent = brl.format(porVenda);
+      $('res-mes').textContent = brl.format(noMes);
+      $('res-desconto').textContent = brl.format(desconto);
+      $('res-economia').textContent = brl.format(Math.max(0, desconto - noMes));
+      atalhos.forEach((b) => b.setAttribute('aria-pressed', String(Number(b.dataset.pct) === p)));
     };
-    valor.addEventListener('input', calcular);
-    document.querySelectorAll('input[name="pct"]').forEach((r) => r.addEventListener('change', calcular));
+
+    [valor, vendas, pct].forEach((campo) => campo.addEventListener('input', calcular));
+    atalhos.forEach((b) => b.addEventListener('click', () => { pct.value = b.dataset.pct; calcular(); }));
     calcular();
   }
 
