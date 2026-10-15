@@ -6,10 +6,10 @@
 
   <!-- SEO essencial -->
   <title>Cashback para lojistas em Mossoró | Comprei Ganhei · CDL Mossoró</title>
-  <meta name="description" content="Cadastre sua loja no Comprei Ganhei, o programa de cashback da CDL Mossoró. Seu cliente compra, pede CPF na nota, recebe dinheiro de volta via Pix e volta a comprar no comércio local.">
+  <meta name="description" content="Cadastre sua empresa no Comprei Ganhei, a plataforma oficial de cashback da CDL Mossoró. Cadastro gratuito, você define o percentual e paga só o cashback que seus clientes resgatarem.">
   <link rel="canonical" href="https://compreiganhei.com.br/lojistas/">
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="theme-color" content="#0b7a4b">
+  <meta name="theme-color" content="#ffd31a">
   <meta name="geo.region" content="BR-RN">
   <meta name="geo.placename" content="Mossoró">
 
@@ -17,16 +17,23 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Comprei Ganhei">
-  <meta property="og:title" content="Sua loja no Comprei Ganhei: cashback que traz o cliente de volta">
-  <meta property="og:description" content="Programa de cashback da CDL Mossoró. O cliente recebe parte da compra de volta via Pix e continua comprando em Mossoró.">
+  <meta property="og:title" content="Comprei Ganhei para lojistas: cashback que traz o cliente de volta">
+  <meta property="og:description" content="Plataforma oficial de cashback da CDL Mossoró. Cadastro gratuito na fase inicial e pagamento só do cashback resgatado.">
   <meta property="og:url" content="https://compreiganhei.com.br/lojistas/">
-  <meta property="og:image" content="https://compreiganhei.com.br/assets/img/og-lojistas.png">
+  <meta property="og:image" content="https://compreiganhei.com.br/assets/img/og-lojistas.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Comprei Ganhei para lojistas: cashback via Pix no comércio de Mossoró">
+  <meta property="og:image:alt" content="Comprei Ganhei para lojistas: cashback no comércio de Mossoró">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="icon" href="/assets/img/favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="preload" as="image" href="/assets/img/logo-comprei-ganhei-640.webp" fetchpriority="high">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap">
   <link rel="stylesheet" href="/assets/css/style.css">
 
   <!-- Dados estruturados (SEO + GEO) -->
@@ -39,12 +46,21 @@
         "@id": "https://compreiganhei.com.br/#organizacao",
         "name": "Comprei Ganhei",
         "url": "https://compreiganhei.com.br/",
-        "logo": "https://compreiganhei.com.br/assets/img/favicon.svg",
+        "logo": "https://compreiganhei.com.br/assets/img/logo-comprei-ganhei.png",
+        "sameAs": ["https://apps.apple.com/br/app/comprei-ganhei/id6760735014"],
         "parentOrganization": {
           "@type": "Organization",
           "name": "CDL Mossoró (Câmara de Dirigentes Lojistas de Mossoró)",
           "address": { "@type": "PostalAddress", "addressLocality": "Mossoró", "addressRegion": "RN", "addressCountry": "BR" }
         }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://compreiganhei.com.br/#site",
+        "url": "https://compreiganhei.com.br/",
+        "name": "Comprei Ganhei",
+        "inLanguage": "pt-BR",
+        "publisher": { "@id": "https://compreiganhei.com.br/#organizacao" }
       },
       {
         "@type": "WebPage",
@@ -54,15 +70,8 @@
         "inLanguage": "pt-BR",
         "isPartOf": { "@id": "https://compreiganhei.com.br/#site" },
         "about": { "@id": "https://compreiganhei.com.br/lojistas/#servico" },
-        "breadcrumb": { "@id": "https://compreiganhei.com.br/lojistas/#breadcrumb" }
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://compreiganhei.com.br/#site",
-        "url": "https://compreiganhei.com.br/",
-        "name": "Comprei Ganhei",
-        "inLanguage": "pt-BR",
-        "publisher": { "@id": "https://compreiganhei.com.br/#organizacao" }
+        "breadcrumb": { "@id": "https://compreiganhei.com.br/lojistas/#breadcrumb" },
+        "primaryImageOfPage": "https://compreiganhei.com.br/assets/img/og-lojistas.jpg"
       },
       {
         "@type": "BreadcrumbList",
@@ -75,34 +84,42 @@
       {
         "@type": "Service",
         "@id": "https://compreiganhei.com.br/lojistas/#servico",
-        "name": "Programa de cashback Comprei Ganhei para lojistas",
-        "serviceType": "Programa de cashback e fidelização para o comércio local",
+        "name": "Comprei Ganhei para empresas",
+        "serviceType": "Plataforma de cashback e fidelização para o comércio local",
         "provider": { "@id": "https://compreiganhei.com.br/#organizacao" },
         "areaServed": { "@type": "City", "name": "Mossoró", "containedInPlace": { "@type": "State", "name": "Rio Grande do Norte" } },
-        "audience": { "@type": "BusinessAudience", "audienceType": "Lojistas, comerciantes e prestadores de serviço de Mossoró" },
-        "description": "Programa de cashback da CDL Mossoró, desenvolvido com a FCDL-RN. O consumidor compra em empresas cadastradas, informa o CPF na nota fiscal, envia a nota pela plataforma e recebe cashback via Pix, com saque a partir de R$ 30 acumulados em qualquer loja participante."
+        "audience": { "@type": "BusinessAudience", "audienceType": "Empresas associadas à CDL Mossoró" },
+        "description": "Plataforma oficial de cashback da CDL Mossoró. A empresa associada se cadastra gratuitamente na fase inicial e define o percentual de cashback. O cliente compra com CPF na nota, escaneia o QR Code da nota fiscal no aplicativo e recebe o cashback via Pix ao acumular R$ 30. A CDL envia à empresa um boleto apenas com o valor dos cashbacks resgatados pelos seus clientes.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "BRL",
+          "description": "Cadastro gratuito na fase inicial. A empresa paga somente o valor do cashback resgatado pelos clientes.",
+          "url": "https://compreiganhei.com.br/empresas/cadastro"
+        }
       },
       {
         "@type": "HowTo",
-        "name": "Como cadastrar sua loja no Comprei Ganhei",
+        "name": "Como cadastrar sua empresa no Comprei Ganhei",
         "inLanguage": "pt-BR",
         "step": [
-          { "@type": "HowToStep", "position": 1, "name": "Cadastre a empresa", "text": "Preencha o cadastro da sua empresa na plataforma da CDL Mossoró." },
-          { "@type": "HowToStep", "position": 2, "name": "Entre na rede de lojas participantes", "text": "Sua loja passa a integrar a lista de empresas onde a compra gera cashback." },
-          { "@type": "HowToStep", "position": 3, "name": "Venda com CPF na nota", "text": "O cliente compra, pede CPF na nota fiscal e envia a nota pela plataforma." },
-          { "@type": "HowToStep", "position": 4, "name": "Cliente recebe e volta", "text": "O cliente acumula cashback e saca via Pix a partir de R$ 30, comprando de novo nas lojas participantes." }
+          { "@type": "HowToStep", "position": 1, "name": "Seja associado da CDL Mossoró", "text": "O Comprei Ganhei é exclusivo para empresas associadas à CDL Mossoró." },
+          { "@type": "HowToStep", "position": 2, "name": "Cadastre a empresa", "text": "Faça o cadastro gratuito em compreiganhei.com.br/empresas/cadastro." },
+          { "@type": "HowToStep", "position": 3, "name": "Defina o percentual de cashback", "text": "No cadastro, escolha o percentual que deseja oferecer sobre o valor das compras." },
+          { "@type": "HowToStep", "position": 4, "name": "Apareça no aplicativo", "text": "Sua empresa entra na vitrine do aplicativo, na lista de lojas que oferecem cashback." }
         ]
       },
       {
         "@type": "FAQPage",
         "@id": "https://compreiganhei.com.br/lojistas/#faq",
         "mainEntity": [
-          { "@type": "Question", "name": "O que é o Comprei Ganhei?", "acceptedAnswer": { "@type": "Answer", "text": "É o programa de cashback da CDL Mossoró, criado com a FCDL-RN para estimular compras no comércio local. O cliente compra em uma empresa cadastrada, pede CPF na nota, envia a nota pela plataforma e recebe parte do valor de volta via Pix." } },
-          { "@type": "Question", "name": "Como minha loja participa do Comprei Ganhei?", "acceptedAnswer": { "@type": "Answer", "text": "Pelo cadastro de empresas na plataforma da CDL Mossoró. Depois de aprovada, sua loja entra na rede de lojas participantes e as compras feitas nela passam a gerar cashback para o cliente." } },
-          { "@type": "Question", "name": "Preciso trocar meu sistema de vendas?", "acceptedAnswer": { "@type": "Answer", "text": "A mecânica do programa se baseia na nota fiscal com CPF do consumidor. Quem envia a nota para a plataforma é o próprio cliente. A sua loja precisa emitir a nota fiscal normalmente, com o CPF informado pelo cliente." } },
-          { "@type": "Question", "name": "Quando o cliente pode sacar o cashback?", "acceptedAnswer": { "@type": "Answer", "text": "O saque via Pix fica disponível quando o saldo acumulado chega a R$ 30, somando compras feitas em qualquer loja participante." } },
-          { "@type": "Question", "name": "O programa tem sorteio?", "acceptedAnswer": { "@type": "Answer", "text": "Não. O benefício é cashback direto: cada compra registrada devolve parte do valor ao cliente." } },
-          { "@type": "Question", "name": "O Comprei Ganhei vale só para Mossoró?", "acceptedAnswer": { "@type": "Answer", "text": "Mossoró é a primeira cidade do Rio Grande do Norte a usar a plataforma. A FCDL-RN planeja levar o modelo a outras cidades do estado depois do piloto." } }
+          { "@type": "Question", "name": "O que é o Comprei Ganhei?", "acceptedAnswer": { "@type": "Answer", "text": "É a plataforma oficial de cashback da CDL Mossoró. O objetivo é atrair o consumidor para o comércio local, transformando gastos do dia a dia em dinheiro de volta no aplicativo." } },
+          { "@type": "Question", "name": "Quem pode participar do Comprei Ganhei?", "acceptedAnswer": { "@type": "Answer", "text": "Empresas associadas à CDL Mossoró. Se a sua empresa ainda não é associada, o primeiro passo é se associar à entidade." } },
+          { "@type": "Question", "name": "Quanto custa para a empresa participar?", "acceptedAnswer": { "@type": "Answer", "text": "O cadastro é gratuito na fase inicial, sem taxas de participação. A empresa paga apenas o valor dos cashbacks que os seus clientes resgataram, por meio de um boleto enviado pela CDL." } },
+          { "@type": "Question", "name": "Qual percentual de cashback devo oferecer?", "acceptedAnswer": { "@type": "Answer", "text": "A empresa define o percentual no cadastro e é ela quem arca com esse valor. Há opção de 2,5%, e a maioria das empresas tem aderido com 1%." } },
+          { "@type": "Question", "name": "Como o cliente registra a compra?", "acceptedAnswer": { "@type": "Answer", "text": "O cliente compra com CPF na nota fiscal e escaneia o QR Code da nota pelo aplicativo Comprei Ganhei. Só compras com CPF na nota geram cashback." } },
+          { "@type": "Question", "name": "Quando o cliente recebe o cashback?", "acceptedAnswer": { "@type": "Answer", "text": "Quando acumula R$ 30 em créditos de compras nas empresas cadastradas, o cliente recebe o valor via Pix. No extrato, aparece que o valor veio da sua empresa." } },
+          { "@type": "Question", "name": "Como a empresa acompanha os resultados?", "acceptedAnswer": { "@type": "Answer", "text": "Pelo painel da empresa na plataforma, em tempo real: quais consumidores registraram notas e o valor exato de cashback a ser pago." } }
         ]
       }
     ]
@@ -112,18 +129,17 @@
 <body>
   <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
-  <header class="topo" id="topo">
+  <header class="topo">
     <div class="wrap topo__inner">
       <a class="marca" href="/" aria-label="Comprei Ganhei, página inicial">
-        <svg class="marca__icone" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="currentColor"/><path d="M9 17.5l4.5 4.5L23 11" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span>Comprei <strong>Ganhei</strong></span>
+        <img src="/assets/img/logo-comprei-ganhei-240.webp" width="240" height="118" alt="Comprei Ganhei">
       </a>
       <nav class="menu" id="menu" aria-label="Seções da página">
         <a href="#beneficios">Benefícios</a>
         <a href="#como-funciona">Como funciona</a>
-        <a href="#para-quem">Para quem</a>
+        <a href="#lancamento">Campanha</a>
         <a href="#duvidas">Dúvidas</a>
-        <a class="btn btn--sm" href="#cadastro">Cadastrar minha loja</a>
+        <a class="btn btn--sm" href="https://compreiganhei.com.br/empresas/cadastro" data-cta="menu">Cadastrar empresa</a>
       </nav>
       <button class="menu__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
         <span></span><span></span><span></span>
@@ -137,51 +153,41 @@
     <section class="hero">
       <div class="wrap hero__grid">
         <div class="hero__texto">
-          <p class="selo">Iniciativa CDL Mossoró · FCDL-RN</p>
-          <h1>Cashback para lojistas de Mossoró: <span class="destaque">o cliente ganha, volta e compra de novo na sua loja.</span></h1>
-          <p class="lead">Com o <strong>Comprei Ganhei</strong>, cada compra feita na sua loja devolve parte do valor ao cliente via Pix. Ele acumula saldo comprando no comércio da cidade e tem um motivo concreto para escolher você outra vez.</p>
+          <p class="selo">Plataforma oficial de cashback da CDL Mossoró</p>
+          <h1>Cashback para lojistas de Mossoró: <span class="destaque">mais clientes na sua loja, e você só paga pelo que for resgatado.</span></h1>
+          <p class="lead">Com o <strong>Comprei Ganhei</strong>, sua empresa devolve parte de cada compra ao cliente e aparece no aplicativo bem na hora da decisão de compra. O cadastro é <strong>gratuito</strong> e exclusivo para associados da CDL Mossoró.</p>
           <div class="hero__ctas">
-            <a class="btn btn--lg" href="#cadastro">Quero cadastrar minha loja</a>
+            <a class="btn btn--lg" href="https://compreiganhei.com.br/empresas/cadastro" data-cta="hero">Cadastrar minha empresa</a>
             <a class="btn btn--ghost btn--lg" href="#como-funciona">Ver como funciona</a>
           </div>
-          <ul class="hero__provas" aria-label="Destaques do programa">
-            <li>Cashback pago via Pix</li>
-            <li>Sem sorteio, benefício direto</li>
-            <li>Mossoró é a cidade piloto do RN</li>
+          <ul class="hero__provas" aria-label="Destaques para a empresa">
+            <li>Cadastro gratuito na fase inicial</li>
+            <li>Você define o percentual</li>
+            <li>Paga só o cashback resgatado</li>
           </ul>
         </div>
 
-        <div class="hero__visual" aria-hidden="true">
-          <div class="celular">
-            <div class="celular__tela">
-              <p class="celular__app">Comprei Ganhei</p>
-              <div class="saldo">
-                <span>Seu saldo</span>
-                <strong>R$ 32,40</strong>
-                <em>Saque via Pix liberado</em>
-              </div>
-              <ul class="extrato">
-                <li><span>Loja de calçados</span><b>+ R$ 9,80</b></li>
-                <li><span>Farmácia</span><b>+ R$ 4,15</b></li>
-                <li><span>Restaurante</span><b>+ R$ 6,30</b></li>
-                <li><span>Ótica</span><b>+ R$ 12,15</b></li>
-              </ul>
-            </div>
+        <div class="hero__visual">
+          <img class="hero__logo" src="/assets/img/logo-comprei-ganhei-640.webp" width="640" height="314" alt="Logo do Comprei Ganhei: nota fiscal sorridente com moedas de real" fetchpriority="high">
+          <div class="flutuante flutuante--pix" aria-hidden="true">
+            <span class="flutuante__icone">Pix</span>
+            <p><b>R$ 30,00 recebido</b><br>Cashback de <em>Sua Loja</em></p>
           </div>
-          <div class="notificacao">
-            <span class="notificacao__ponto"></span>
-            <p><b>Nota enviada!</b> Cashback creditado na sua conta.</p>
+          <div class="flutuante flutuante--pct" aria-hidden="true">
+            <p>Você escolhe</p>
+            <b>1%</b>
+            <span>ou 2,5%</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- RESUMO (bloco de resposta direta para buscadores e IAs) -->
+    <!-- RESUMO (resposta direta para buscadores e IAs) -->
     <section class="resumo" aria-labelledby="resumo-titulo">
       <div class="wrap">
         <div class="resumo__caixa">
           <h2 id="resumo-titulo">Em resumo: o que é o Comprei Ganhei</h2>
-          <p>O Comprei Ganhei é o <strong>programa de cashback da CDL Mossoró</strong>, desenvolvido com a <strong>FCDL-RN</strong> para movimentar o comércio local. O consumidor compra em uma empresa cadastrada, pede <strong>CPF na nota fiscal</strong>, envia a nota pela plataforma e recebe parte do valor de volta <strong>via Pix</strong>. O saque é liberado a partir de <strong>R$ 30 acumulados</strong>, somando compras em qualquer loja participante. Mossoró é a primeira cidade do Rio Grande do Norte a usar a plataforma.</p>
+          <p>O Comprei Ganhei é a <strong>plataforma oficial de cashback da CDL Mossoró</strong>, criada para atrair o consumidor ao comércio local. A empresa associada se cadastra <strong>gratuitamente</strong> e define o percentual de cashback. O cliente compra com <strong>CPF na nota</strong>, escaneia o QR Code da nota fiscal no aplicativo e, ao somar <strong>R$ 30</strong>, recebe via <strong>Pix</strong>. A CDL envia à empresa um boleto <strong>apenas com o valor dos cashbacks resgatados</strong> pelos seus clientes.</p>
         </div>
       </div>
     </section>
@@ -189,60 +195,48 @@
     <!-- PROBLEMA -->
     <section class="secao" aria-labelledby="problema-titulo">
       <div class="wrap estreito">
-        <p class="sobretitulo">O desafio de todo lojista</p>
-        <h2 id="problema-titulo">Conquistar um cliente custa caro. Perder ele para o concorrente ou para a internet custa mais.</h2>
-        <p>O cliente entra, compra e vai embora. Na próxima vez, escolhe pelo preço, pela entrega rápida do aplicativo ou pela loja que aparecer primeiro. Desconto corrói sua margem, e panfleto ninguém guarda.</p>
-        <p>O Comprei Ganhei cria um <strong>motivo para o cliente continuar comprando no comércio de Mossoró</strong>: o dinheiro que volta para o bolso dele depois de cada compra registrada.</p>
+        <p class="sobretitulo">O desafio do comércio local</p>
+        <h2 id="problema-titulo">O cliente de Mossoró está comprando em sites de fora. Dar desconto para trazê-lo de volta corrói sua margem.</h2>
+        <p>Cada compra feita num site de outro estado é uma venda que saiu da cidade. E a resposta mais comum, o desconto agressivo, reduz o lucro de toda venda, inclusive das que você faria de qualquer jeito.</p>
+        <p>O Comprei Ganhei oferece ao cliente uma vantagem concreta para comprar no comércio físico da cidade: <strong>dinheiro de volta no Pix</strong>. Para você, o custo é um percentual pequeno, escolhido por você, cobrado só quando o cliente resgata.</p>
       </div>
     </section>
 
     <!-- BENEFÍCIOS -->
-    <section class="secao secao--alt" id="beneficios" aria-labelledby="beneficios-titulo">
+    <section class="secao secao--verde" id="beneficios" aria-labelledby="beneficios-titulo">
       <div class="wrap">
-        <p class="sobretitulo">Por que participar</p>
+        <p class="sobretitulo sobretitulo--amarelo">Vantagens para a sua empresa</p>
         <h2 id="beneficios-titulo">O que sua loja ganha com o cashback da CDL Mossoró</h2>
         <div class="cards">
           <article class="card">
-            <div class="card__icone" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7M3 4v5h5" /></svg>
-            </div>
-            <h3>Cliente que volta</h3>
-            <p>O saldo só cresce com novas compras nas lojas participantes. Quem já começou a acumular tem razão para voltar, e sua loja está no caminho.</p>
+            <div class="card__icone" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <h3>Combate à concorrência da internet</h3>
+            <p>O consumidor tem um motivo para deixar de comprar em sites de fora e escolher o comércio físico da cidade, onde ganha cashback na sua loja.</p>
           </article>
           <article class="card">
-            <div class="card__icone" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M17 20v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2M10 10a4 4 0 1 0 0-8 4 4 0 0 0 0 8M21 20v-2a4 4 0 0 0-3-3.9M16 2.1a4 4 0 0 1 0 7.8" /></svg>
-            </div>
-            <h3>Clientes de outras lojas</h3>
-            <p>Você entra numa rede de empresas participantes. O consumidor que procura onde ganhar cashback descobre o seu negócio.</p>
+            <div class="card__icone" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg></div>
+            <h3>Vitrine no aplicativo</h3>
+            <p>Sua empresa aparece na lista de lojas que oferecem cashback, como sugestão e destaque, na palma da mão do consumidor e no momento da decisão de compra.</p>
           </article>
           <article class="card">
-            <div class="card__icone" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M3 11l18-8-8 18-2-8-8-2z" /></svg>
-            </div>
-            <h3>Força de uma campanha coletiva</h3>
-            <p>A divulgação é da cidade inteira, com o peso da CDL Mossoró e da FCDL-RN. Sozinha, nenhuma loja teria esse alcance.</p>
+            <div class="card__icone" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg></div>
+            <h3>Mais vendas e ticket médio maior</h3>
+            <p>O cliente é incentivado a consumir mais no seu estabelecimento para acumular e resgatar o benefício.</p>
           </article>
           <article class="card">
-            <div class="card__icone" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
-            </div>
-            <h3>Benefício que o cliente sente</h3>
-            <p>Dinheiro no Pix é concreto. Sem sorteio, sem cupom de papel, sem esperar a sorte: comprou, registrou a nota, ganhou.</p>
+            <div class="card__icone" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 12V8H6a2 2 0 0 1 0-4h12v4M4 6v12a2 2 0 0 0 2 2h14v-4M18 12a2 2 0 0 0 0 4h4v-4z"/></svg></div>
+            <h3>Diferencial sem sacrificar a margem</h3>
+            <p>Você oferece uma vantagem real ao cliente sem entrar na guerra de descontos agressivos.</p>
           </article>
           <article class="card">
-            <div class="card__icone" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M9 15l2 2 4-4" /></svg>
-            </div>
-            <h3>Operação simples no balcão</h3>
-            <p>A mecânica usa a nota fiscal com CPF que sua loja já emite. Quem envia a nota para a plataforma é o próprio cliente.</p>
+            <div class="card__icone" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 3v18h18M7 15l3-3 3 2 5-6"/></svg></div>
+            <h3>Gestão e transparência total</h3>
+            <p>Painel da empresa em tempo real, com o fluxo de clientes e as notas geradas na sua loja.</p>
           </article>
           <article class="card">
-            <div class="card__icone" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zM9 22V12h6v10" /></svg>
-            </div>
-            <h3>Dinheiro girando em Mossoró</h3>
-            <p>O cashback estimula novas compras no comércio da cidade. Mais movimento local fortalece sua loja e as vizinhas.</p>
+            <div class="card__icone" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M9 15l2 2 4-4"/></svg></div>
+            <h3>Pagamento só sobre o resgate</h3>
+            <p>A CDL envia um boleto referente apenas ao valor dos cashbacks que os seus clientes resgataram. Sem taxa de participação na fase inicial.</p>
           </article>
         </div>
       </div>
@@ -252,32 +246,120 @@
     <section class="secao" id="como-funciona" aria-labelledby="como-titulo">
       <div class="wrap">
         <p class="sobretitulo">Passo a passo</p>
-        <h2 id="como-titulo">Como funciona o Comprei Ganhei para a sua loja</h2>
+        <h2 id="como-titulo">Como sua empresa participa do Comprei Ganhei</h2>
         <ol class="passos">
           <li class="passo">
             <span class="passo__num" aria-hidden="true">1</span>
-            <h3>Cadastre sua empresa</h3>
-            <p>Faça a adesão pela plataforma da CDL Mossoró. O cadastro de empresas já está aberto.</p>
+            <h3>Seja associado da CDL</h3>
+            <p>O projeto é exclusivo para empresas associadas à CDL Mossoró. Esse é o primeiro passo.</p>
           </li>
           <li class="passo">
             <span class="passo__num" aria-hidden="true">2</span>
-            <h3>Entre na rede participante</h3>
-            <p>Sua loja passa a integrar a lista de empresas onde a compra gera cashback.</p>
+            <h3>Cadastre a empresa</h3>
+            <p>Cadastro 100% gratuito nesta fase inicial, sem taxas para participar.</p>
           </li>
           <li class="passo">
             <span class="passo__num" aria-hidden="true">3</span>
-            <h3>Venda com CPF na nota</h3>
-            <p>O cliente compra, informa o CPF na nota fiscal e envia a nota pela plataforma.</p>
+            <h3>Defina o percentual</h3>
+            <p>No cadastro, você escolhe quanto quer devolver ao cliente. A maioria das empresas tem aderido com 1%.</p>
           </li>
           <li class="passo">
             <span class="passo__num" aria-hidden="true">4</span>
-            <h3>O cliente ganha e volta</h3>
-            <p>O cashback cai no saldo. Ao somar R$ 30 em qualquer loja participante, ele saca via Pix e continua comprando.</p>
+            <h3>Apareça no aplicativo</h3>
+            <p>Sua loja entra na vitrine do app, entre as empresas que oferecem cashback aos clientes.</p>
           </li>
         </ol>
 
-        <div class="dica">
-          <p><strong>Dica de balcão:</strong> pergunte sempre “CPF na nota para ganhar cashback?”. Essa frase lembra o cliente do benefício e associa a vantagem à sua loja.</p>
+        <div class="dinamica" aria-labelledby="dinamica-titulo">
+          <div class="dinamica__seguranca">
+            <h3>Regra de segurança: CPF na nota</h3>
+            <p>Só geram benefício as compras feitas com <strong>CPF na nota fiscal</strong>. Assim o cashback vai exatamente para quem comprou, e sua empresa fica protegida contra usos indevidos.</p>
+          </div>
+          <div class="dinamica__fluxo">
+            <h3 id="dinamica-titulo">Dinâmica de compra e resgate</h3>
+            <ol>
+              <li>O cliente compra na sua loja e <strong>escaneia o QR Code da nota fiscal</strong> pelo aplicativo.</li>
+              <li>Você acompanha pelo painel <strong>quem registrou a nota e o valor exato</strong> de cashback.</li>
+              <li>Ao acumular <strong>R$ 30 em créditos</strong> nas empresas cadastradas, o cliente recebe via Pix. No extrato, aparece que o valor veio da <strong>sua empresa</strong>.</li>
+              <li>A CDL envia um <strong>boleto apenas com o valor dos cashbacks resgatados</strong> pelos seus clientes.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIMULAÇÃO -->
+    <section class="secao secao--amarelo" aria-labelledby="conta-titulo">
+      <div class="wrap">
+        <p class="sobretitulo sobretitulo--marrom">Faça a conta</p>
+        <h2 id="conta-titulo">Quanto custa o cashback para a sua loja</h2>
+        <div class="conta">
+          <div class="conta__calc">
+            <label for="valor-venda">Valor da venda</label>
+            <div class="conta__campo">
+              <span>R$</span>
+              <input id="valor-venda" type="number" inputmode="decimal" min="1" step="1" value="200">
+            </div>
+            <fieldset class="conta__pct">
+              <legend>Percentual de cashback</legend>
+              <label><input type="radio" name="pct" value="1" checked> 1%</label>
+              <label><input type="radio" name="pct" value="2.5"> 2,5%</label>
+            </fieldset>
+          </div>
+          <div class="conta__resultado" aria-live="polite">
+            <div class="conta__linha conta__linha--cb">
+              <span>Cashback que volta ao cliente</span>
+              <strong id="res-cashback">R$ 2,00</strong>
+            </div>
+            <div class="conta__linha">
+              <span>Um desconto de 10% custaria</span>
+              <strong id="res-desconto">R$ 20,00</strong>
+            </div>
+            <p class="conta__nota">E o cashback só é cobrado da sua empresa quando o cliente resgata.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAMPANHA DE LANÇAMENTO -->
+    <section class="secao secao--laranja" id="lancamento" aria-labelledby="lancamento-titulo">
+      <div class="wrap">
+        <p class="sobretitulo sobretitulo--amarelo">Outubro a dezembro</p>
+        <h2 id="lancamento-titulo">A CDL vai movimentar a cidade para levar clientes à sua loja</h2>
+        <p class="estreito lancamento__lead">Para o aplicativo ser um sucesso imediato de downloads e vendas, a campanha de lançamento trabalha em duas frentes:</p>
+        <div class="frentes">
+          <article>
+            <h3>Mídia massiva</h3>
+            <p>Campanhas ativas em rádio, TV (TCM), portais locais, Meta Ads (Instagram e Facebook) e Google/YouTube.</p>
+          </article>
+          <article>
+            <h3>Ações de rua</h3>
+            <p>Blitz nas ruas, presença de influenciadores e eventos semanais nos pontos de venda para o consumidor baixar o app e comprar nas lojas cadastradas.</p>
+          </article>
+        </div>
+
+        <h3 class="galeria__titulo">Peças da campanha no ponto de venda</h3>
+        <ul class="galeria">
+          <li><figure><img src="/assets/img/pdv-outdoor.webp" width="918" height="383" loading="lazy" alt="Outdoor do Comprei Ganhei com a frase Mossoró compra junto, todo mundo ganha"><figcaption>Outdoor</figcaption></figure></li>
+          <li><figure><img src="/assets/img/pdv-caixa.webp" width="510" height="383" loading="lazy" alt="Display de balcão com QR Code para baixar o aplicativo, ao lado do caixa"><figcaption>Display de caixa com QR Code</figcaption></figure></li>
+          <li><figure><img src="/assets/img/pdv-display.webp" width="451" height="676" loading="lazy" alt="Display de chão com o mascote do Comprei Ganhei e QR Code do aplicativo"><figcaption>Display de chão</figcaption></figure></li>
+          <li><figure><img src="/assets/img/pdv-windbanner.webp" width="452" height="676" loading="lazy" alt="Wind banner na porta da loja: baixe o aplicativo e receba cashback em dinheiro"><figcaption>Wind banner</figcaption></figure></li>
+          <li><figure><img src="/assets/img/pdv-mobile.webp" width="432" height="432" loading="lazy" alt="Móbile de teto do Comprei Ganhei"><figcaption>Móbile</figcaption></figure></li>
+          <li><figure><img src="/assets/img/pdv-banner.webp" width="390" height="426" loading="lazy" alt="Banner suspenso do Comprei Ganhei dentro de supermercado"><figcaption>Banner</figcaption></figure></li>
+        </ul>
+        <p class="galeria__nota">Imagens ilustrativas das peças de divulgação.</p>
+      </div>
+    </section>
+
+    <!-- CAMISETAS -->
+    <section class="secao" aria-labelledby="camisetas-titulo">
+      <div class="wrap camisetas">
+        <img class="camisetas__foto" src="/assets/img/camiseta.webp" width="570" height="1080" loading="lazy" alt="Vendedor com a camiseta amarela oficial do Comprei Ganhei">
+        <div>
+          <p class="sobretitulo sobretitulo--laranja">Condição especial</p>
+          <h2 id="camisetas-titulo">Uniformes da campanha com a marca da sua loja</h2>
+          <p>Para fortalecer a presença da sua marca e engajar a equipe de vendas, a <strong>CDL subsidia as camisetas oficiais dos vendedores</strong>.</p>
+          <p class="camisetas__preco">Inclua a logo da sua empresa na camiseta pagando apenas <strong>R$ 15,00 por peça</strong>.</p>
         </div>
       </div>
     </section>
@@ -285,127 +367,71 @@
     <!-- NÚMEROS -->
     <section class="numeros" aria-labelledby="numeros-titulo">
       <div class="wrap">
-        <h2 id="numeros-titulo" class="numeros__titulo">O comércio de Mossoró já está aderindo</h2>
+        <h2 id="numeros-titulo" class="numeros__titulo">O Comprei Ganhei em números</h2>
         <dl class="numeros__grid">
-          <div><dt>Empresas confirmadas nos primeiros dias de cadastro</dt><dd>+50</dd></div>
-          <div><dt>Meta de empresas participantes</dt><dd>+500</dd></div>
-          <div><dt>Saldo mínimo para o cliente sacar via Pix</dt><dd>R$ 30</dd></div>
-          <div><dt>Mossoró é a primeira cidade do RN na plataforma</dt><dd>1ª</dd></div>
+          <div><dt>Taxa de cadastro na fase inicial</dt><dd>R$ 0</dd></div>
+          <div><dt>Percentual mais adotado pelas empresas</dt><dd>1%</dd></div>
+          <div><dt>Saldo para o cliente receber via Pix</dt><dd>R$ 30</dd></div>
+          <div><dt>Por camiseta com a logo da sua loja</dt><dd>R$ 15</dd></div>
         </dl>
-        <p class="numeros__fonte">Dados divulgados pela CDL Mossoró na fase de cadastro de empresas.</p>
-      </div>
-    </section>
-
-    <!-- PARA QUEM -->
-    <section class="secao" id="para-quem" aria-labelledby="quem-titulo">
-      <div class="wrap">
-        <p class="sobretitulo">Para quem é</p>
-        <h2 id="quem-titulo">Feito para o comércio e os serviços de Mossoró</h2>
-        <p class="estreito">Se sua empresa vende ao consumidor final em Mossoró e emite nota fiscal, ela pode fazer parte. Alguns segmentos que ganham com cliente recorrente:</p>
-        <ul class="tags">
-          <li>Moda e calçados</li>
-          <li>Farmácias</li>
-          <li>Supermercados e mercadinhos</li>
-          <li>Restaurantes e lanchonetes</li>
-          <li>Óticas</li>
-          <li>Material de construção</li>
-          <li>Eletro e celulares</li>
-          <li>Pet shops</li>
-          <li>Beleza e cosméticos</li>
-          <li>Papelarias</li>
-          <li>Autopeças</li>
-          <li>Serviços em geral</li>
-        </ul>
       </div>
     </section>
 
     <!-- DÚVIDAS -->
-    <section class="secao secao--alt" id="duvidas" aria-labelledby="faq-titulo">
+    <section class="secao secao--claro" id="duvidas" aria-labelledby="faq-titulo">
       <div class="wrap estreito">
         <p class="sobretitulo">Perguntas frequentes</p>
         <h2 id="faq-titulo">Dúvidas de lojistas sobre o Comprei Ganhei</h2>
         <div class="faq">
           <details>
             <summary>O que é o Comprei Ganhei?</summary>
-            <p>É o programa de cashback da CDL Mossoró, criado com a FCDL-RN para estimular compras no comércio local. O cliente compra em uma empresa cadastrada, pede CPF na nota, envia a nota pela plataforma e recebe parte do valor de volta via Pix.</p>
+            <p>É a plataforma oficial de cashback da CDL Mossoró. O objetivo é atrair o consumidor para o comércio local, transformando gastos do dia a dia em dinheiro de volta no aplicativo.</p>
           </details>
           <details>
-            <summary>Como minha loja participa?</summary>
-            <p>Pelo cadastro de empresas na plataforma da CDL Mossoró. Depois de aprovada, sua loja entra na rede de lojas participantes e as compras feitas nela passam a gerar cashback para o cliente.</p>
+            <summary>Quem pode participar?</summary>
+            <!-- TODO(CDL): incluir link de associação à CDL Mossoró. -->
+            <p>Empresas associadas à CDL Mossoró. Se a sua empresa ainda não é associada, o primeiro passo é se associar à entidade.</p>
           </details>
           <details>
-            <summary>Preciso trocar meu sistema de vendas?</summary>
-            <p>A mecânica se baseia na nota fiscal com CPF do consumidor, e quem envia a nota para a plataforma é o próprio cliente. Sua loja precisa emitir a nota fiscal normalmente, com o CPF informado.</p>
+            <summary>Quanto custa para a empresa participar?</summary>
+            <p>O cadastro é gratuito na fase inicial, sem taxas de participação. A empresa paga apenas o valor dos cashbacks que os seus clientes resgataram, por meio de um boleto enviado pela CDL.</p>
           </details>
           <details>
-            <summary>Quando o cliente pode sacar o cashback?</summary>
-            <p>O saque via Pix fica disponível quando o saldo chega a R$ 30, somando compras feitas em qualquer loja participante.</p>
+            <summary>Qual percentual de cashback devo oferecer?</summary>
+            <p>Você define no cadastro, e é a sua empresa que arca com esse valor. Há opção de 2,5%, e a maioria das empresas tem aderido com 1%.</p>
           </details>
           <details>
-            <summary>O programa tem sorteio?</summary>
-            <p>Não. O benefício é cashback direto: cada compra registrada devolve parte do valor ao cliente.</p>
+            <summary>Como o cliente registra a compra?</summary>
+            <p>O cliente compra com CPF na nota fiscal e escaneia o QR Code da nota pelo aplicativo Comprei Ganhei. Só compras com CPF na nota geram cashback.</p>
           </details>
           <details>
-            <summary>Quanto custa para a minha loja participar?</summary>
-            <!-- TODO(CDL): substituir pelas condições oficiais de adesão (taxa, percentual de cashback, quem custeia, exigência de associação). -->
-            <p>As condições de adesão são apresentadas pela CDL Mossoró no momento do cadastro. Deixe seu contato abaixo e nossa equipe explica tudo em detalhes.</p>
+            <summary>Preciso mudar meu sistema de vendas?</summary>
+            <p>A mecânica usa a nota fiscal com CPF que sua loja já emite. Quem escaneia a nota no aplicativo é o próprio cliente.</p>
           </details>
           <details>
-            <summary>O Comprei Ganhei vale só para Mossoró?</summary>
-            <p>Mossoró é a primeira cidade do Rio Grande do Norte a usar a plataforma. A FCDL-RN planeja levar o modelo a outras cidades do estado depois do piloto.</p>
+            <summary>Quando o cliente recebe o cashback?</summary>
+            <p>Quando acumula R$ 30 em créditos de compras nas empresas cadastradas, o cliente recebe via Pix. No extrato, aparece que o valor veio da sua empresa.</p>
+          </details>
+          <details>
+            <summary>Como acompanho os resultados?</summary>
+            <p>Pelo painel da empresa, em tempo real: quais consumidores registraram notas e o valor exato de cashback a ser pago.</p>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- CADASTRO / CTA FINAL -->
-    <section class="cadastro" id="cadastro" aria-labelledby="cadastro-titulo">
-      <div class="wrap cadastro__grid">
-        <div class="cadastro__texto">
-          <p class="sobretitulo sobretitulo--claro">Cadastros abertos</p>
-          <h2 id="cadastro-titulo">Garanta sua loja entre as primeiras do Comprei Ganhei</h2>
-          <p>Quem entra cedo aparece desde o lançamento, quando a atenção do público está no auge. Deixe seus dados e a equipe da CDL Mossoró fala com você pelo WhatsApp.</p>
-          <ul class="checklist">
-            <li>Atendimento direto com a CDL Mossoró</li>
-            <li>Explicação completa das regras de adesão</li>
-            <li>Sem compromisso para tirar dúvidas</li>
-          </ul>
-        </div>
-
-        <form class="form" id="form-cadastro" novalidate>
-          <h3 class="form__titulo">Quero participar</h3>
-          <label>
-            <span>Seu nome</span>
-            <input type="text" name="nome" autocomplete="name" required>
-          </label>
-          <label>
-            <span>Nome da loja</span>
-            <input type="text" name="loja" autocomplete="organization" required>
-          </label>
-          <label>
-            <span>Segmento</span>
-            <select name="segmento" required>
-              <option value="">Selecione</option>
-              <option>Moda e calçados</option>
-              <option>Farmácia</option>
-              <option>Supermercado ou mercadinho</option>
-              <option>Restaurante ou lanchonete</option>
-              <option>Ótica</option>
-              <option>Material de construção</option>
-              <option>Eletro e celulares</option>
-              <option>Beleza e cosméticos</option>
-              <option>Serviços</option>
-              <option>Outro</option>
-            </select>
-          </label>
-          <label>
-            <span>WhatsApp</span>
-            <input type="tel" name="whatsapp" autocomplete="tel" inputmode="tel" placeholder="(84) 9 0000-0000" required>
-          </label>
-          <button class="btn btn--lg btn--bloco" type="submit">Enviar pelo WhatsApp</button>
-          <p class="form__erro" role="alert" hidden>Preencha todos os campos para continuar.</p>
-          <p class="form__nota">Seus dados são usados só para o contato sobre o programa.</p>
-        </form>
+    <!-- CTA FINAL -->
+    <section class="final" id="cadastro" aria-labelledby="final-titulo">
+      <div class="wrap final__inner">
+        <img src="/assets/img/logo-comprei-ganhei-240.webp" width="240" height="118" loading="lazy" alt="" class="final__logo">
+        <h2 id="final-titulo">Faça o cadastro da sua empresa no <span>Comprei Ganhei</span></h2>
+        <p>Cadastre-se durante a campanha de lançamento e apareça no aplicativo enquanto a cidade inteira está baixando.</p>
+        <a class="btn btn--lg" href="https://compreiganhei.com.br/empresas/cadastro" data-cta="final">Cadastrar minha empresa agora</a>
+        <ul class="final__lista">
+          <li>Gratuito na fase inicial</li>
+          <li>Exclusivo para associados CDL</li>
+          <li>Você paga só o cashback resgatado</li>
+        </ul>
       </div>
     </section>
 
@@ -413,28 +439,33 @@
 
   <footer class="rodape">
     <div class="wrap rodape__grid">
-      <div>
-        <a class="marca marca--claro" href="/">
-          <svg class="marca__icone" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="currentColor"/><path d="M9 17.5l4.5 4.5L23 11" fill="none" stroke="#0b7a4b" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span>Comprei <strong>Ganhei</strong></span>
-        </a>
-        <p>Programa de cashback da CDL Mossoró, em parceria com a FCDL-RN.</p>
+      <div class="rodape__marca">
+        <img src="/assets/img/logo-comprei-ganhei-240.webp" width="160" height="79" loading="lazy" alt="Comprei Ganhei">
+        <p>Mossoró compra junto. Todo mundo ganha.</p>
       </div>
       <nav aria-label="Links do rodapé">
         <ul>
+          <li><a href="https://compreiganhei.com.br/empresas/cadastro">Cadastro de empresas</a></li>
           <li><a href="/">Sou cliente: quero ganhar cashback</a></li>
-          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="https://apps.apple.com/br/app/comprei-ganhei/id6760735014" rel="noopener">Baixar na App Store</a></li>
+          <!-- TODO(CDL): link da Google Play (o QR do slide aponta para a App Store). -->
           <li><a href="#duvidas">Perguntas frequentes</a></li>
-          <li><a href="#cadastro">Cadastrar minha loja</a></li>
         </ul>
       </nav>
+      <div class="rodape__parceiros">
+        <p>Realização e apoio</p>
+        <div>
+          <img src="/assets/img/cdl-mossoro.webp" width="344" height="127" loading="lazy" alt="CDL Mossoró">
+          <img src="/assets/img/governo-rn.webp" width="172" height="139" loading="lazy" alt="Governo do Estado do Rio Grande do Norte">
+        </div>
+      </div>
     </div>
     <div class="wrap rodape__base">
-      <p>© <span id="ano">2026</span> Comprei Ganhei · CDL Mossoró · Mossoró/RN</p>
+      <p>© <span id="ano">2026</span> Comprei Ganhei · CDL Mossoró · Juntos por um comércio mais forte para todos.</p>
     </div>
   </footer>
 
-  <a class="cta-fixo oculto" href="#cadastro">Cadastrar minha loja</a>
+  <a class="cta-fixo oculto" href="https://compreiganhei.com.br/empresas/cadastro" data-cta="fixo">Cadastrar minha empresa</a>
 
   <script src="/assets/js/main.js" defer></script>
 </body>

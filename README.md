@@ -18,18 +18,21 @@ npx http-server -p 8080 .
 
 ## SEO e GEO aplicados
 
-- Título, descrição, canonical, Open Graph e imagem de compartilhamento (`assets/img/og-lojistas.png`, 1200x630).
+- Título, descrição, canonical, Open Graph e imagem de compartilhamento (`assets/img/og-lojistas.jpg`, 1200x630).
 - Um único `h1`, hierarquia de títulos semântica, conteúdo legível sem JavaScript.
 - JSON-LD: Organization, WebSite, WebPage, BreadcrumbList, Service, HowTo e FAQPage.
 - Bloco "Em resumo" com a definição do programa logo após o hero (trecho citável por buscadores e IAs).
 - `llms.txt` com os fatos do programa; `robots.txt` liberando buscadores de IA; `sitemap.xml`.
-- Página leve: fonte do sistema, sem imagens pesadas, sem bibliotecas.
+- Página leve: imagens em WebP com carregamento sob demanda, fonte Poppins com `display=swap`, sem bibliotecas.
+
+## Fonte do conteúdo
+
+Textos e regras extraídos da apresentação oficial "Comprei Ganhei · Lojistas" (CDL Mossoró). Imagens da campanha recortadas dos slides 7 a 10 e otimizadas em WebP.
 
 ## Pendências (confirmar com a CDL antes de publicar)
 
-1. **WhatsApp que recebe os cadastros:** `WHATSAPP_CDL` em `assets/js/main.js` (hoje é um número fictício).
-2. **Condições de adesão:** custo, percentual de cashback, quem custeia, se exige ser associado. Ver `TODO(CDL)` no FAQ de `lojistas/index.html`.
-3. **Link oficial de cadastro de empresas**, se houver formulário próprio da CDL (pode substituir o envio por WhatsApp).
-4. **Identidade visual:** cores e logo oficiais (variáveis em `:root` de `assets/css/style.css`).
-5. **Números da seção "O comércio de Mossoró já está aderindo":** atualizar conforme a adesão real.
-6. **Data de lançamento** e analytics (o formulário já dispara `generate_lead` se o `gtag` estiver instalado).
+1. **Link da Google Play:** no slide 12, o QR Code marcado como "Play Store" aponta para a App Store. O rodapé hoje só traz o link da App Store.
+2. **Link para se associar à CDL Mossoró:** ver `TODO(CDL)` no FAQ de `lojistas/index.html`.
+3. **Papel do Governo do RN:** o rodapé usa o rótulo genérico "Realização e apoio". Ajustar se houver nomenclatura oficial.
+4. **Prêmios:** algumas peças dizem "concorra a prêmios em dinheiro e cashback". A página não fala de prêmios até haver regras oficiais.
+5. **Analytics:** os botões de cadastro disparam `generate_lead` se o GA4 (`gtag`) estiver instalado.

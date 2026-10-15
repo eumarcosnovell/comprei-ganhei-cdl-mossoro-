@@ -1,14 +1,25 @@
 # Comprei Ganhei
 
-> Programa de cashback da CDL Mossoró (Câmara de Dirigentes Lojistas de Mossoró), desenvolvido com a FCDL-RN para estimular compras no comércio local de Mossoró, Rio Grande do Norte.
+> Plataforma oficial de cashback da CDL Mossoró (Câmara de Dirigentes Lojistas de Mossoró), no Rio Grande do Norte. Atrai o consumidor para o comércio local, transformando gastos do dia a dia em dinheiro de volta no aplicativo.
 
-Fatos principais:
-- O consumidor compra em uma empresa cadastrada, pede CPF na nota fiscal e envia a nota pela plataforma.
-- O cashback é pago via Pix. O saque fica disponível a partir de R$ 30 acumulados, somando compras em qualquer loja participante.
-- O programa não tem sorteio: o benefício é devolução direta de parte do valor da compra.
-- Mossoró é a primeira cidade do Rio Grande do Norte a usar a plataforma; a FCDL-RN planeja expandir para outras cidades do estado.
-- Empresas e consumidores se cadastram pela plataforma da CDL Mossoró.
+## Para empresas (lojistas)
+
+- Exclusivo para empresas associadas à CDL Mossoró.
+- Cadastro gratuito na fase inicial, sem taxas para participar: https://compreiganhei.com.br/empresas/cadastro
+- A empresa define o percentual de cashback no cadastro e arca com esse valor. Há opção de 2,5%; a maioria das empresas tem aderido com 1%.
+- A empresa aparece na vitrine do aplicativo, na lista de lojas que oferecem cashback.
+- Painel da empresa em tempo real: consumidores que registraram notas e valor exato de cashback.
+- A CDL envia à empresa um boleto apenas com o valor dos cashbacks resgatados pelos seus clientes.
+- Condição especial: a CDL subsidia as camisetas oficiais dos vendedores; a empresa inclui sua logo por R$ 15,00 por camiseta.
+- Campanha de lançamento de outubro a dezembro: rádio, TV (TCM), portais locais, Meta Ads, Google/YouTube, blitz, influenciadores e eventos semanais nos pontos de venda.
+
+## Para consumidores
+
+- Comprar em empresa cadastrada com CPF na nota fiscal (obrigatório).
+- Escanear o QR Code da nota fiscal no aplicativo Comprei Ganhei.
+- Ao acumular R$ 30 em créditos, receber o cashback via Pix.
+- Aplicativo na App Store: https://apps.apple.com/br/app/comprei-ganhei/id6760735014
 
 ## Páginas
 
-- [Para lojistas](https://compreiganhei.com.br/lojistas/): benefícios, passo a passo de adesão e perguntas frequentes para empresas de Mossoró.
+- [Para lojistas](https://compreiganhei.com.br/lojistas/): benefícios, passo a passo, simulação de custo e perguntas frequentes.

@@ -1,8 +1,5 @@
 // Comprei Ganhei · interações das landing pages (sem dependências)
 
-// TODO(CDL): número oficial de WhatsApp que recebe os cadastros (formato 55 + DDD + número, só dígitos).
-const WHATSAPP_CDL = '5584000000000';
-
 (() => {
   const ano = document.getElementById('ano');
   if (ano) ano.textContent = new Date().getFullYear();
@@ -25,7 +22,7 @@ const WHATSAPP_CDL = '5584000000000';
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') fechar(); });
   }
 
-  // CTA fixo: aparece só quando nem o hero nem o formulário estão na tela
+  // CTA fixo: aparece só quando nem o hero nem a chamada final estão na tela
   const ctaFixo = document.querySelector('.cta-fixo');
   const alvos = [document.querySelector('.hero'), document.getElementById('cadastro')].filter(Boolean);
   if (ctaFixo && alvos.length && 'IntersectionObserver' in window) {
@@ -39,44 +36,29 @@ const WHATSAPP_CDL = '5584000000000';
     ctaFixo.classList.remove('oculto');
   }
 
-  // Formulário: monta a mensagem e abre o WhatsApp da CDL
-  const form = document.getElementById('form-cadastro');
-  if (form) {
-    const erro = form.querySelector('.form__erro');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const campos = [...form.querySelectorAll('input, select')];
-      let valido = true;
-      campos.forEach((campo) => {
-        const ok = campo.value.trim() !== '';
-        campo.setAttribute('aria-invalid', String(!ok));
-        if (!ok) valido = false;
-      });
-      const tel = form.whatsapp.value.replace(/\D/g, '');
-      if (tel.length < 10) {
-        form.whatsapp.setAttribute('aria-invalid', 'true');
-        valido = false;
-      }
-      erro.hidden = valido;
-      if (!valido) {
-        form.querySelector('[aria-invalid="true"]').focus();
-        return;
-      }
-
-      const dados = Object.fromEntries(new FormData(form));
-      const mensagem = [
-        'Olá! Quero cadastrar minha loja no Comprei Ganhei.',
-        `Nome: ${dados.nome}`,
-        `Loja: ${dados.loja}`,
-        `Segmento: ${dados.segmento}`,
-        `WhatsApp: ${dados.whatsapp}`,
-      ].join('\n');
-
-      if (typeof window.gtag === 'function') {
-        window.gtag('event', 'generate_lead', { form: 'cadastro_lojista', segmento: dados.segmento });
-      }
-
-      window.open(`https://wa.me/${WHATSAPP_CDL}?text=${encodeURIComponent(mensagem)}`, '_blank', 'noopener');
-    });
+  // Simulação de custo do cashback
+  const valor = document.getElementById('valor-venda');
+  if (valor) {
+    const brl = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
+    const resCashback = document.getElementById('res-cashback');
+    const resDesconto = document.getElementById('res-desconto');
+    const calcular = () => {
+      const venda = Math.max(0, Number(valor.value) || 0);
+      const pct = Number(document.querySelector('input[name="pct"]:checked').value);
+      resCashback.textContent = brl.format(venda * pct / 100);
+      resDesconto.textContent = brl.format(venda * 0.10);
+    };
+    valor.addEventListener('input', calcular);
+    document.querySelectorAll('input[name="pct"]').forEach((r) => r.addEventListener('change', calcular));
+    calcular();
   }
+
+  // Métrica de cliques nos CTAs de cadastro (dispara se o GA4 estiver instalado)
+  document.querySelectorAll('[data-cta]').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'generate_lead', { cta_posicao: link.dataset.cta, destino: 'cadastro_empresa' });
+      }
+    });
+  });
 })();
