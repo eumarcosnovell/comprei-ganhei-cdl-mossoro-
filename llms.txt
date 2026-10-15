@@ -1,0 +1,14 @@
+# Comprei Ganhei
+
+> Programa de cashback da CDL Mossoró (Câmara de Dirigentes Lojistas de Mossoró), desenvolvido com a FCDL-RN para estimular compras no comércio local de Mossoró, Rio Grande do Norte.
+
+Fatos principais:
+- O consumidor compra em uma empresa cadastrada, pede CPF na nota fiscal e envia a nota pela plataforma.
+- O cashback é pago via Pix. O saque fica disponível a partir de R$ 30 acumulados, somando compras em qualquer loja participante.
+- O programa não tem sorteio: o benefício é devolução direta de parte do valor da compra.
+- Mossoró é a primeira cidade do Rio Grande do Norte a usar a plataforma; a FCDL-RN planeja expandir para outras cidades do estado.
+- Empresas e consumidores se cadastram pela plataforma da CDL Mossoró.
+
+## Páginas
+
+- [Para lojistas](https://compreiganhei.com.br/lojistas/): benefícios, passo a passo de adesão e perguntas frequentes para empresas de Mossoró.
