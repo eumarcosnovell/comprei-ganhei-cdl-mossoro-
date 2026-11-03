@@ -24,7 +24,7 @@
 
   // CTA fixo: aparece só quando nem o hero nem a chamada final estão na tela
   const ctaFixo = document.querySelector('.cta-fixo');
-  const alvos = [document.querySelector('.hero'), document.getElementById('cadastro')].filter(Boolean);
+  const alvos = [document.querySelector('.hero'), document.querySelector('.final')].filter(Boolean);
   if (ctaFixo && alvos.length && 'IntersectionObserver' in window) {
     const visiveis = new Set();
     const obs = new IntersectionObserver((entradas) => {
@@ -70,10 +70,44 @@
     calcular();
   }
 
-  // Métrica de cliques nos CTAs de cadastro (dispara se o GA4 estiver instalado)
+  // Simulação de cashback do cliente: quanto ganha e quando chega o primeiro Pix
+  const gasto = document.getElementById('gasto-mes');
+  const pctCliente = document.getElementById('pct-cliente');
+  if (gasto && pctCliente) {
+    const SALDO_PIX = 30;
+    const brl = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
+    const num = new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 1 });
+    const $ = (id) => document.getElementById(id);
+    const atalhos = document.querySelectorAll('#quanto-ganho .conta__atalhos [data-pct]');
+
+    const calcular = () => {
+      const valor = Math.max(0, Number(gasto.value) || 0);
+      const p = Number(pctCliente.value);
+      const mes = valor * p / 100;
+      const meses = mes > 0 ? Math.ceil(SALDO_PIX / mes - 1e-9) : 0;
+
+      pctCliente.style.setProperty('--preenchido', `${((p - pctCliente.min) / (pctCliente.max - pctCliente.min)) * 100}%`);
+      $('pct-cliente-valor').textContent = `${num.format(p)}%`;
+      pctCliente.setAttribute('aria-valuetext', `${num.format(p)} por cento`);
+      $('res-cliente-mes').textContent = brl.format(mes);
+      $('res-cliente-ano').textContent = brl.format(mes * 12);
+      $('res-cliente-prazo').textContent = !meses ? 'informe seu gasto'
+        : meses === 1 ? 'já no 1º mês' : `em ${meses} meses`;
+      atalhos.forEach((b) => b.setAttribute('aria-pressed', String(Number(b.dataset.pct) === p)));
+    };
+
+    [gasto, pctCliente].forEach((campo) => campo.addEventListener('input', calcular));
+    atalhos.forEach((b) => b.addEventListener('click', () => { pctCliente.value = b.dataset.pct; calcular(); }));
+    calcular();
+  }
+
+  // Métrica de cliques nos CTAs (dispara se o GA4 estiver instalado)
   document.querySelectorAll('[data-cta]').forEach((link) => {
     link.addEventListener('click', () => {
-      if (typeof window.gtag === 'function') {
+      if (typeof window.gtag !== 'function') return;
+      if (link.dataset.destino === 'app_store') {
+        window.gtag('event', 'baixar_app', { cta_posicao: link.dataset.cta, loja: 'app_store' });
+      } else {
         window.gtag('event', 'generate_lead', { cta_posicao: link.dataset.cta, destino: 'cadastro_empresa' });
       }
     });
