@@ -294,6 +294,38 @@ a { color: var(--verde-texto); }
 .final__lista { list-style: none; padding: 0; margin: 26px 0 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 24px; font-weight: 600; }
 @media (max-width: 600px) { .final { padding: 64px 0; } .final .btn { width: 100%; } }
 
+/* Página do cliente: regra do CPF */
+.regra { display: flex; gap: 22px; align-items: flex-start; margin-top: 28px; background: var(--amarelo); color: var(--marrom); border-radius: var(--raio); padding: 28px 30px; }
+.regra h3 { font-size: 1.3rem; }
+.regra p { margin: 0; }
+.regra__icone { flex: none; width: 60px; height: 60px; border-radius: 16px; background: var(--marrom); display: grid; place-items: center; }
+.regra__icone svg { width: 30px; height: 30px; fill: none; stroke: var(--amarelo); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+@media (max-width: 600px) { .regra { flex-direction: column; gap: 14px; padding: 24px; } }
+
+/* Página do cliente: onde ganhar */
+.onde { display: grid; grid-template-columns: 1fr 1.05fr; gap: 48px; align-items: center; }
+.onde h2 { color: var(--marrom); }
+.onde__texto p:not(.sobretitulo) { color: var(--texto-suave); font-size: 1.08rem; }
+.onde__texto strong { color: var(--texto); }
+.onde__fotos { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 14px; }
+.onde__fotos li:first-child { grid-row: span 2; }
+.onde__fotos figure { margin: 0; height: 100%; display: flex; flex-direction: column; background: var(--creme); border: 1px solid var(--borda); border-radius: 14px; overflow: hidden; }
+.onde__fotos img { width: 100%; flex: 1; min-height: 0; object-fit: cover; }
+.onde__fotos li:not(:first-child) img { aspect-ratio: 4 / 3; }
+.onde__fotos figcaption { padding: 8px 12px; font-size: .85rem; font-weight: 600; color: var(--marrom); }
+@media (max-width: 860px) { .onde { grid-template-columns: 1fr; gap: 28px; } }
+
+.numeros__grid--3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 760px) { .numeros__grid--3 { grid-template-columns: 1fr; } }
+
+/* CTA final com QR Code (o QR só aparece em telas grandes) */
+.final__acoes { display: flex; align-items: center; justify-content: center; gap: 28px; }
+.final__qr { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.final__qr img { width: 132px; height: 132px; background: #fff; border-radius: 14px; padding: 8px; }
+.final__qr figcaption { font-size: .85rem; color: rgba(255, 255, 255, .85); }
+@media (max-width: 880px) { .final__qr { display: none; } }
+@media (max-width: 600px) { .final__acoes { width: 100%; } }
+
 /* Rodapé */
 .rodape { background: var(--marrom-escuro); color: rgba(255, 255, 255, .78); padding: 56px 0 100px; font-size: .95rem; }
 .rodape__grid { display: grid; grid-template-columns: 1fr auto auto; gap: 40px; align-items: start; }

@@ -15,11 +15,14 @@
 
 ## Para consumidores
 
+- Cada empresa define o percentual de cashback; a maioria oferece 1%.
 - Comprar em empresa cadastrada com CPF na nota fiscal (obrigatório).
 - Escanear o QR Code da nota fiscal no aplicativo Comprei Ganhei.
-- Ao acumular R$ 30 em créditos, receber o cashback via Pix.
+- Ao acumular R$ 30 em créditos (somando todas as empresas cadastradas), receber o cashback via Pix.
+- A lista de empresas que oferecem cashback fica no aplicativo.
 - Aplicativo na App Store: https://apps.apple.com/br/app/comprei-ganhei/id6760735014
 
 ## Páginas
 
+- [Para consumidores](https://compreiganhei.com.br/): como ganhar cashback, simulação de ganhos e perguntas frequentes.
 - [Para lojistas](https://compreiganhei.com.br/lojistas/): benefícios, passo a passo, simulação de custo e perguntas frequentes.
